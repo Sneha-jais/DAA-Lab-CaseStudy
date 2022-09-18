@@ -48,11 +48,14 @@ int search_ind(int arr[],int low,int high,int key){
 int main()
 {
 int n;
+cout<<"Enter number of elements:\n"; 	
 cin>>n;
 int arr[n];
+cout<<"Enter elements:\n";
 for(int i=0;i<n;i++){
     cin>>arr[i];
 }
+cout<<"Enter element you want to search:\n";	
 int key;
 cin>>key;
 
