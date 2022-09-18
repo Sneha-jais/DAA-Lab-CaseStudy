@@ -1,9 +1,13 @@
 /* 
 Searching an element in a sorted array (Ternary Search):
 Given a sorted array arr[] of size N and an integer K. The task is to check if K is present in
-the array or not using ternary search.
+the array or not using ternary search. Return the position of desired element.
 Expected Time Complexity: O(Log3N)
 Expected Auxiliary Space: O(1)
+Input: n=5
+       arr[]={1,2,3,5,6}
+       key=5
+Output: 4
 */
 
 
@@ -36,14 +40,16 @@ return -1;
 int main(){
 int n,key;
 
-cout<<"Enter number of elements:\n"; cin>>n;
+cout<<"Enter number of elements:\n"; 
+cin>>n;
 int arr[n];
-
-cout<<"Enter elements:\n"; for(int i=0;i<n;i++){ 
+cout<<"Enter elements:\n"; 
+for(int i=0;i<n;i++){ 
 cin>>arr[i];
 }
 
-cout<<"Enter element you want to search:\n"; cin>>key;
+cout<<"Enter element you want to search:\n";
+cin>>key;
 int x=ternary_search(arr,0,n-1,key);
 cout<<"Position of desired element is:"<<x+1<<endl;
 return 0;
