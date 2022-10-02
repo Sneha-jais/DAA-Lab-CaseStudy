@@ -11,6 +11,23 @@ Input: n=5
        Explanation: It has three inversion (2,1), (4,1), (4,3).
 */
 
+//Approach 1: Brute Force
+int brute_inver(int *arr, int n) {
+ int count = 0;
+ for (int i = 0; i < n; ++i) {
+ for (int j = i + 1; j < n; ++j) {
+ if (arr[i] > arr[j]) {
+ ++count;
+ }
+ }
+ }
+ return count;
+}
+
+
+
+
+//Approach 2: Divide and Conquer 
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -75,7 +92,10 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
-    
+       
+  //BruteForce Call
+ //int invCount=brute_inver(arr,n);
+       
    int invCount=merge_sort(arr,0,n-1);
       cout<<invCount;    
     return 0;
